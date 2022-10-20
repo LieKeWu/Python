@@ -1,0 +1,15 @@
+destination = ['TaiWan', 'Japan', 'USA', 'France', 'UK']
+
+print(destination)
+sorted(destination)
+print(destination)
+sorted(destination)
+print(destination)
+destination.reverse()
+print(destination)
+destination.reverse()
+print(destination)
+destination.sort()
+print(destination)
+destination.sort()
+print(destination)
