@@ -1,1 +1,6 @@
-"""version:1"""
+"""version2"""
+
+
+class Test():
+    def __init__(self, name):
+        self.name = name
