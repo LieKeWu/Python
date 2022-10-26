@@ -17,4 +17,5 @@ class TestEmployeeCase(unittest.TestCase):
         salary_raise = my_employee.give_raise(4000)
         self.assertEqual(salary_raise, 14000)
 
+
 unittest.main
