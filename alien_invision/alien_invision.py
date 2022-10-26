@@ -9,6 +9,9 @@ def run_game():
     screen = pygame.display.set_mode((1200, 800))  # 设置宽高
     pygame.display.set_caption("Alien Invision")  # 设置应用标题
 
+    # 设置背景色
+    bg_color = (230, 230, 230)
+
     # 开启游戏住循环
     while True:
 
@@ -17,6 +20,8 @@ def run_game():
             if event.type == pygame.QUIT:  # 点击关闭按钮，退出游戏
                 sys.exit()
 
+        # 每次循环都重绘屏幕
+        screen.fill(bg_color)
         # 让最近绘制的屏幕可见
         pygame.display.flip()
 
