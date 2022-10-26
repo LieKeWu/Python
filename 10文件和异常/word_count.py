@@ -1,19 +1,7 @@
-def count_words(filename):
-    """计算一个文件大致包含多少单词"""
-    try:
-        with open(filename) as f_obj:
-            contents = f_obj.read()
-    except FileNotFoundError:
-        pass
-    else:
-        # 计算文件大致包含多少个单词
-        words = contents.split()
-        num_words = len(words)
-        print("The file " + filename + " has about " +
-              str(num_words) + " words.")
+filename = 'search_the.txt'
 
+# 读取文件中的the的次数，lower不区分大小写
+with open(filename) as f_obj:
+    the_number = f_obj.read().lower().count('the')
 
-filenames = ['file_text/alice.txt', 'file_text/siddhartha.txt',
-             'moby_dick.txt', 'little_women.txt']
-for filename in filenames:
-    count_words(filename)
+print(the_number)
