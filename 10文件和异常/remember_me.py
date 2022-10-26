@@ -26,12 +26,17 @@ def get_new_username():
 
 def greet_user():
     """问候用户，并指出其姓名"""
-    name = get_stored_username()
-    if name:
-        print('Welcom back, ' + name + "!")
+    username = get_stored_username()
+    if username:
+        correct = input('Are you ' + username + " ? (Y/N)")
+        if correct == 'y':
+            print('Welcom back, ' + username + "!")
+        else:
+            username = get_new_username()
+            print("We'll remember you when you com back, " + username + "!")
     else:
-        name = get_new_username()
-        print("We'll remember you when you com back, " + name + "!")
+        username = get_new_username()
+        print("We'll remember you when you com back, " + username + "!")
 
 
 greet_user()
