@@ -2,6 +2,7 @@ import sys
 import pygame
 from setting import Settings
 from ship import Ship
+import game_functions as gf
 
 
 def run_game():
@@ -17,11 +18,8 @@ def run_game():
 
     # 开启游戏住循环
     while True:
-
         # 监听键盘和鼠标事件
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:  # 点击关闭按钮，退出游戏
-                sys.exit()
+        gf.check_events()
 
         # 每次循环都重绘屏幕
         screen.fill(ai_setting.bg_color)
