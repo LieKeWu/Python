@@ -1,7 +1,7 @@
 import sys
 import pygame
 from setting import Settings
-from ship import Ship
+from ship import Ship, Goku
 import game_functions as gf
 
 
@@ -16,12 +16,15 @@ def run_game():
     # 创造一艘飞船
     ship = Ship(screen)
 
+    # 创建一个悟空
+    goku = Goku(screen)
+
     # 开启游戏住循环
     while True:
         # 监听键盘和鼠标事件
         gf.check_events()
         # 每次循环都重绘屏幕
-        gf.update_screen()
+        gf.update_screen(ai_setting, screen, ship, goku)
 
 
 run_game()
